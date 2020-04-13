@@ -1,0 +1,1 @@
+INSERT INTO "NHOM_CHUC_NANG" VALUES ('1', 'Công việc', '1');

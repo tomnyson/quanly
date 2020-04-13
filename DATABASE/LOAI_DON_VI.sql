@@ -1,0 +1,1 @@
+INSERT INTO "LOAI_DON_VI" VALUES ('1', 'Công nghệ thông tin');
