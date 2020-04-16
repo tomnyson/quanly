@@ -1,0 +1,27 @@
+version: "3"
+networks:
+  my_network:
+    driver: bridge
+services:
+  oracle_database:
+    container_name: oracle_database
+    image: quay.io/maksymbilenko/oracle-12c
+    networks:
+      - my_network
+    restart: always
+    ports:
+      - 1521:1521
+  my_app:
+    networks:
+      - my_network
+    container_name: my_app
+    image: davidgaya/apache-php-oci
+    volumes:
+      - ./app:/var/www/html
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - oracle_database
+    links:
+      - oracle_database

@@ -1,8 +1,8 @@
 <?php
 
-const ORACLE_CONNECTION_STRING = "38d8355c9452/XE";
-const ORACLE_USERNAME = "quanly";
-const ORACLE_PASSWORD = "admin";
+const ORACLE_CONNECTION_STRING = "oracle_database/XE";
+const ORACLE_USERNAME = "system";
+const ORACLE_PASSWORD = "oracle";
 const ORACLE_CHARSET = "UTF8";
 ini_set('max_execution_time', 0);
 function connect_to_oracle_db()
