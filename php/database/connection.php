@@ -1,8 +1,8 @@
 <?php
 
-const ORACLE_CONNECTION_STRING = "localhost/XE";
-const ORACLE_USERNAME = "TOMNYSON";
-const ORACLE_PASSWORD = "Admin123@";
+const ORACLE_CONNECTION_STRING = "38d8355c9452/XE";
+const ORACLE_USERNAME = "quanly";
+const ORACLE_PASSWORD = "admin";
 const ORACLE_CHARSET = "UTF8";
 ini_set('max_execution_time', 0);
 function connect_to_oracle_db()
@@ -34,7 +34,6 @@ function get_array_from_function() // $function_name, $parameters
     }
 
     $sql .= "); END;";
-
     $stid = oci_parse($conn, $sql);
     $result_cursor = oci_new_cursor($conn);
     oci_bind_by_name($stid, ':result_cursor', $result_cursor, -1, OCI_B_CURSOR);

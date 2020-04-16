@@ -27,7 +27,6 @@ $(function () {
         hien_thi_thong_bao_dang_nhap('#sign_in_message', false, '');
 
         var mat_khau_md5 = $.md5(mat_khau);
-        console.log('call herer');
         $.post("/php/tai_khoan/dang_nhap_tai_khoan.php",
             {
                 ten_truy_cap: ten_truy_cap,
