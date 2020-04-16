@@ -11,10 +11,10 @@ const DANG_NHAP_FUNCTION = "DANG_NHAP_W";
 const POST_KEY_1 = "ten_truy_cap";
 const POST_KEY_2 = "mat_khau";
 
-// $ten_truy_cap =  filter_input(INPUT_POST, POST_KEY_1);
-// $mat_khau =  filter_input(INPUT_POST, POST_KEY_2);
-$ten_truy_cap = "admin";
-$mat_khau = "e10adc3949ba59abbe56e057f20f883e";
+$ten_truy_cap =  filter_input(INPUT_POST, POST_KEY_1);
+$mat_khau =  filter_input(INPUT_POST, POST_KEY_2);
+// $ten_truy_cap = "admin";
+// $mat_khau = "e10adc3949ba59abbe56e057f20f883e";
 $array = get_array_from_function(DANG_NHAP_FUNCTION, $ten_truy_cap, $mat_khau);
 $rowCount = count($array);
 if ($rowCount > 0) {
